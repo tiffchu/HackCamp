@@ -29,9 +29,20 @@ bot.on('message', msg => {
         msg.reply('Hello ' + content[1]);
     }
 })
-
 bot.on('message', msg => {
     if(msg.content.startsWith(prefix + 'bye')) {
         msg.reply('bye!');
     }
 })
+bot.on('message', msg => {
+    if(msg.content. startWith(prefix)) || message.author.bot) return;
+    
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().tolowerCase();
+
+    if(command === 'fwoosh'){
+        message.channel.send('swoosh!');
+    } else if(command == 'youtube'){
+        message.channel.send('https://wwww.youtube.com')
+    }
+});
