@@ -8,17 +8,17 @@ module.exports = class PingCommand extends Command {
             group: 'test',
             memberName: 'ping and pong',
             description: 'Will reply pong',
-						args: [
-								{
-										key: 'name',
-										prompt: 'name to say hi',
-										type: 'string',
-								}
-						]
+            args: [
+                {
+                    key: 'name',
+                    prompt: 'name to say hi',
+                    type: 'string',
+                }
+            ]
         });
     }
 
-run(message, {name}) {
-	// Command code here!
-}
+    run(msg, { name }) {
+        msg.reply('Hello ' + name);
+    }
 };
