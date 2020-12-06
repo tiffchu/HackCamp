@@ -18,6 +18,7 @@
   "homepage": "https://github.com/keigol/HackCamp#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "discord.js-commando": "github:discordjs/commando"
+    "discord.js-commando": "github:discordjs/commando",
+    "dotenv-flow": "^3.2.0"
   }
 }
