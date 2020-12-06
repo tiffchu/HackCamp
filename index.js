@@ -1,8 +1,19 @@
 require('dotenv-flow').config();
 
 const Discord = require('discord.js')
-const bot = new Discord.Client();
+const { CommandoClient } = require('discord.js-commando');
+
+const bot = new CommandoClient({
+	commandPrefix: prefix,
+});
 const prefix = "!"
+
+bot.registry
+    .registerDefaultTypes()
+    .registerGroup('test', 'test group')
+    .registerDefaultGroups()
+    .registerDefaultCommands()
+    .registerCommandsIn(__dirname + '/commands');
 
 bot.login(process.env.TOKEN);
 
