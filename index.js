@@ -18,3 +18,9 @@ bot.on('message', msg => {
         msg.reply('Hello ' + content[1]);
     }
 })
+
+bot.on('message', msg => {
+    if(msg.content. startWith(prefix + 'bye')) {
+        msg.reply('bye!');
+    }
+})
