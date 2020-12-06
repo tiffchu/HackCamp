@@ -20,7 +20,7 @@ bot.on('message', msg => {
 })
 
 bot.on('message', msg => {
-    if(msg.content. startWith(prefix + 'bye')) {
+    if(msg.content.startWith(prefix + 'bye')) {
         msg.reply('bye!');
     }
 })
